@@ -1,0 +1,41 @@
+package polygon;
+
+import graphics.Point;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import lines.BresenhemAlgorithm;
+import lines.Line;
+import lines.LineDrawingAlgorithm;
+
+public class Polygon {
+	Point vertices[];// vertices should be ordered..end points of a line must be
+						// in order
+	Color color;
+
+	public Polygon(Point vertices[]) {
+		this.vertices = vertices;
+		this.color = Color.blue;
+	}
+
+	public Polygon(Point vertices[], Color color) {
+		this.vertices = vertices;
+		this.color = color;
+	}
+
+	public void draw(Graphics g, Point coordinateCenter) {
+		int n = vertices.length;
+		Line line;
+
+		LineDrawingAlgorithm algo = new BresenhemAlgorithm();
+		for (int i = 0; i < n - 1; i++) {
+			line = new Line(vertices[i], vertices[i + 1]);
+			line.drawLine(coordinateCenter, g, algo);
+		}
+		line = new Line(vertices[0], vertices[n - 1]);
+		line.drawLine(coordinateCenter, g, algo);
+
+	}
+
+}

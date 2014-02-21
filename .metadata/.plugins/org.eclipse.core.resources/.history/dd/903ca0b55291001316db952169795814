@@ -1,0 +1,17 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+
+public class DottedLine extends Line {
+	public DottedLine(Point p1, Point p2){
+		super(p1,p2);
+	}
+	@Override
+	public void drawPoint(Point point, Graphics g,Point center, Color color){
+		if(point.x%5==0){
+			point.translateAndDrawPoint(g, center, color);
+			
+		}
+	}
+	
+}

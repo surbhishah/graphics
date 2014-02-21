@@ -1,0 +1,28 @@
+package algorithms;
+
+import graphics.Point;
+
+import java.awt.Graphics;
+
+import circle.Circle;
+
+public class DirectEquationUse implements CircleDrawingAlgorithm {
+
+	@Override
+	public void drawCircle(Circle circle, Graphics g) {
+		int radius = circle.getRadius();
+		Point center = circle.getCenter();
+		int x,y;
+		Point point= new Point();
+		for (x = 0; x <= center.x + radius; x++) {
+			y = getY(circle,x);
+			
+		}
+	}
+
+	private int getY(Circle circle, int x) {
+		int radius_square = (int) Math.pow(circle.getRadius(), 2);
+		return (int) (circle.getCenter().y + Math.round(Math.sqrt(radius_square
+				- Math.round(Math.pow(circle.getCenter().x - x, 2)))));
+	}
+}

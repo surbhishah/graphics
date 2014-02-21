@@ -1,0 +1,83 @@
+import graphics.AxesUtility;
+import graphics.Point;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import javax.swing.JApplet;
+
+import algorithms.BresenhemAlgorithm;
+import algorithms.CircleDrawingAlgorithm;
+import algorithms.DirectEquationUse;
+import algorithms.MidPointAlgorithm;
+import circle.Circle;
+
+@SuppressWarnings("serial")
+public class CircleApplet extends JApplet {
+
+	@Override
+	public void paint(Graphics g) {
+		Point coordinateCenter = new Point(400, 400);
+		AxesUtility.drawCoordinateSystem(this, g, Color.BLACK, 100,
+				coordinateCenter);
+		AxesUtility.drawAxes(this, g, coordinateCenter, Color.RED);
+		
+		/*****************************************/
+		CircleDrawingAlgorithm algo = new DirectEquationUse();
+		Circle circles[] = { new Circle(new Point(-300, 0), 20),
+				new Circle(new Point(-200, 0), 50),
+				new Circle(new Point(0, 0), 90),
+		};
+		Point p = new Point(100, 50);
+		p = p.translate(coordinateCenter);
+		g.setColor(Color.MAGENTA);
+		g.drawString("Direct Equation",p.x , p.y);
+		perfEvaluate(circles, algo, coordinateCenter, g);
+		
+		/*****************************************/
+		Circle circles1[] = { new Circle(new Point(-300, 200), 20),
+				new Circle(new Point(-200, 200), 50),
+				new Circle(new Point(0, 200), 90) };
+		algo = new MidPointAlgorithm();
+		p = new Point(100, 250);
+		p = p.translate(coordinateCenter);
+		g.setColor(Color.MAGENTA);
+		g.drawString("Mid Point Algorithm",p.x , p.y);
+		perfEvaluate(circles1, algo, coordinateCenter, g);
+		
+		/*****************************************/
+		Circle circles2[] = { new Circle(new Point(-300, -200), 20),
+				new Circle(new Point(-200, -200), 50),
+				new Circle(new Point(0, -200), 90) };
+		algo = new BresenhemAlgorithm();
+		p = new Point(100, -150);
+		p = p.translate(coordinateCenter);
+		g.setColor(Color.MAGENTA);
+		g.drawString("Bresenhem Algorithm",p.x , p.y);
+		perfEvaluate(circles2, algo, coordinateCenter, g);
+
+	}
+
+	void perfEvaluate(CircleDrawingAlgorithm algo,
+			Point coordinateCenter, Graphics g) {
+		try {
+			long startTime = System.nanoTime();
+			Circle circle = new Circle(new Point(0,0), 50);
+				circle.drawCircle(algo, g, coordinateCenter);
+			long estimatedTime = System.nanoTime() - startTime;
+			BufferedWriter out = new BufferedWriter(new FileWriter(
+					"/home/surbhi/Documents/PerfEvaluation.txt", true));
+			out.write("\n" + algo.getClass() + ":" + estimatedTime
+					/ circles.length + "\n");
+			out.close();
+
+		} catch (IOException ex) {
+			System.out.println(ex.getMessage());
+		}
+
+	}
+
+}

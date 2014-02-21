@@ -1,0 +1,23 @@
+import graphics.Point;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JApplet;
+
+import polygon.Polygon;
+
+
+@SuppressWarnings("serial")
+public class PolygonApplet extends JApplet{
+	@Override
+	public void paint(Graphics g){
+		Point vertices[]= new Point[20];
+		vertices[0]= new Point(0,0);
+		vertices[1]= new Point(100,100);
+		vertices[2]= new Point(0,200);
+		Polygon polygon = new Polygon(vertices, Color.RED);
+		
+		
+	}
+}

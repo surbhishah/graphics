@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package geometricTransformations;
+
+/**
+ * @author surbhi
+ *
+ */
+public class Translation implements GeometricTransformation {
+
+	/* (non-Javadoc)
+	 * @see geometricTransformations.GeometricTransformation#tranform()
+	 */
+	@Override
+	public void tranform() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

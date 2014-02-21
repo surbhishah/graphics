@@ -1,0 +1,28 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.applet.Applet;
+public class Planet extends Applet{
+	public void paint(Graphics g){
+		
+		g.drawOval(50, 50, 20, 20);
+		g.setColor(Color.yellow);
+		g.fillOval(50, 50, 20, 20);
+		
+		
+		g.setColor(Color.BLUE);
+		int x,y;
+			try {
+				for(double theta = 0; theta<= 2*Math.PI;theta+=0.1){
+					x= (int)(20+50*Math.sin(theta));
+					y= (int)(20+50*Math.cos(theta));
+					g.fillOval(x,y , 100, 100);
+					Thread.sleep(1000);
+					g.clearRect(x, y, 100, 100);
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		
+		
+	}
+}

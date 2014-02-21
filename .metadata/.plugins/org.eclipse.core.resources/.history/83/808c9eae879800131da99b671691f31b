@@ -1,0 +1,21 @@
+package circle;
+
+import algorithms.CircleDrawingAlgorithm;
+
+public class Circle {
+	private final int radius;
+	private final int centerX;
+	private final int centerY;
+	
+	public Circle(int centerX, int centerY, int radius){
+		this.centerX = centerX;
+		this.centerY = centerY;
+		this.radius = radius;
+	}
+	void drawCircle(CircleDrawingAlgorithm algo){
+		algo.drawCircle(this, g);
+	}
+	int getRadius(){
+		return radius;
+	}
+}

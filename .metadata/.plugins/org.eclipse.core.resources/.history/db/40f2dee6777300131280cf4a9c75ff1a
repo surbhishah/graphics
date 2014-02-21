@@ -1,0 +1,7 @@
+import java.awt.Graphics;
+import java.applet.Applet;
+public class Planet extends Applet{
+	public void paint(Graphics g){
+		
+	}
+}

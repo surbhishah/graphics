@@ -1,0 +1,48 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Point;
+import javax.swing.JApplet;
+import java.awt.geom.Point2D.Double;
+
+
+public class DDA extends JApplet{
+	public void paint(Graphics g){
+		Point center = new Point(400,400);
+		AxesUtility.drawAxes(this, g, center, Color.BLUE);
+		// Draw a line between these two points
+		Double point1 = new Double(0,0);
+		Double point2 = new Double(10,40);
+		Double point3 = new Double(-10,40);
+		Double point4 = new Double(10,-40);
+		Double point5 = new Double(-10,-40);
+		
+		Double point1_t = AxesUtility.translateAxes(point1, center);
+		Double point2_t = AxesUtility.translateAxes(point2, center);
+		drawLine(point1_t,point2_t,g);
+		
+	}
+	public void drawLine(Double p1, Double p2, Graphics g){
+		double dx = p1.getX() - p2.getX();
+		double dy = p1.getY() - p2.getY();
+		double steps;
+		if(Math.abs(dx) > Math.abs(dy)){
+			steps = Math.abs(dx);
+			
+		}else{
+			steps = Math.abs(dy);
+		}
+		double xIncrement = dx/steps;
+		double yIncrement = dy/steps;
+		g.drawLine((int)(p1.getX()), (int)(p1.getY()), (int)(p1.getX()), (int)(p1.getY()));
+		double x=p1.getX(),y=p1.getY();
+		for (double k =0;k<steps;k++){
+			x+= xIncrement;
+			y+= yIncrement;
+			g.drawLine((int)(x), (int)(y), (int)(x), (int)(y));
+				
+		}
+		
+		
+		
+	}
+}

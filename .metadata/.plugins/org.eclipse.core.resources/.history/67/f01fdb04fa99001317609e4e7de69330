@@ -1,0 +1,7 @@
+package geometricTransformations;
+
+public interface GeometricTransformation {
+	public void tranform(){
+		
+	}
+}

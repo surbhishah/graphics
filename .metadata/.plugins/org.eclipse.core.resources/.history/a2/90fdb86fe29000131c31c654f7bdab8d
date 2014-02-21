@@ -1,0 +1,20 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JApplet;
+
+
+@SuppressWarnings("serial")
+public class Test extends JApplet{
+	public void paint(Graphics g){
+		Point center = new Point(400,500);
+		AxesUtility.drawCoordinateSystem(this, g, Color.YELLOW,50);
+		AxesUtility.drawAxes(this, g, center, Color.BLACK);
+		
+		Point p1 = new Point(100,120);
+		Point p2 = new Point(0,0);
+		Line line = new Line(p1,p2);
+		line.drawLineBresenhem(center, g, Color.BLUE);
+		
+	}
+	
+}

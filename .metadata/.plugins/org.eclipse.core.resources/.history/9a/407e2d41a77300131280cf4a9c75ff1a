@@ -1,0 +1,42 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JApplet;
+import java.awt.geom.Point2D.Double;
+
+public class Planet extends JApplet{
+	public void paint(Graphics g){
+		g.drawString("Width="+getWidth(), 50, 50);
+		drawAxes(g,100,100);	
+		
+	}
+	Double translateAxes(Double p, int newCenterX, int newCenterY){
+			return new Double(newCenterX+ p.x,newCenterY -p.y);	
+	}
+	
+	void drawAxes(Graphics g, int CenterX , int CenterY){
+		g.drawLine(0,CenterY,getWidth(),CenterX);
+		g.drawLine(CenterX,0,CenterX,getHeight());		
+	}
+	void drawCircle(Graphics g, int x,int y,double radius){
+		g.drawOval(50, 50, 10, 10);
+		g.setColor(Color.yellow);
+		g.fillOval(50, 50, 20, 20);
+		//this.setBounds(500, 500, 200,200);
+		g.setColor(Color.BLUE);
+		//int x,y;
+			try {
+				for(double theta = 0; theta<= 2*Math.PI;theta+=0.1){
+					x= (int)(50+50*Math.sin(theta));
+					y= (int)(50+50*Math.cos(theta));
+					g.fillOval(x,y , 100, 100);
+					Thread.sleep(1000);
+					g.clearRect(x, y, 100, 100);
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+	
+		
+	}
+	
+}

@@ -1,0 +1,16 @@
+
+public class Circle {
+	private double radius;
+	private double centerX;
+	private double centerY;
+	public Circle(double centerX, double centerY, double radius){
+		this.radius=radius;
+		this.centerX=centerX;
+		this.centerY=centerY;
+	
+	}
+	public static drawCircle(){
+		
+		
+	}
+}

@@ -1,0 +1,11 @@
+
+public class Point2D {
+	/* X and Y coordinate of a point in 2D*/ 
+	double x; 
+	double y;
+	public Point2D(int x,int y){
+		this.x = x;
+		this.y = y;
+		
+	}
+}

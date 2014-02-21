@@ -1,0 +1,23 @@
+package circle;
+
+import java.awt.Graphics;
+import java.awt.Point;
+
+import algorithms.CircleDrawingAlgorithm;
+
+public class Circle {
+	private final int radius;
+	Point center;
+	public Circle(Point center, int radius){
+		
+	}
+	public Circle(int centerX, int centerY, int radius){
+		center.x = centerX;
+		center.y = centerY;
+		this.radius = radius;
+	}
+	void drawCircle(CircleDrawingAlgorithm algo, Graphics g ){
+		algo.drawCircle(this, g);
+	}
+	
+}

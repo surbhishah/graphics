@@ -1,0 +1,11 @@
+package geometricTransformations;
+
+public class Scaling implements GeometricTransformation {
+
+	@Override
+	public void tranform() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

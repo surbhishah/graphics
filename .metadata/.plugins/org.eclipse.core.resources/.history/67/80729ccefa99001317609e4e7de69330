@@ -1,0 +1,8 @@
+package matrices;
+
+public class Matrix {
+	int matrix[][];
+	public Matrix(){
+		
+	}
+}

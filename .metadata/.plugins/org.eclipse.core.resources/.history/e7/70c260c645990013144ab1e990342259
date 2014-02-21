@@ -1,0 +1,15 @@
+package algorithms;
+import graphics.Point;
+
+import java.awt.Graphics;
+
+import circle.Circle;
+
+public abstract class CircleDrawingAlgorithm {
+
+	public abstract void drawCircle(Circle circle, Graphics g, Point coordinateCenter);
+	public void drawSymmetricPoints(){
+		
+	}
+	
+}

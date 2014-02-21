@@ -1,0 +1,17 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+
+public class BresenhemAlgorithm implements LineDrawingAlgorithm {
+
+	@Override
+	public void drawLine(Line line, Point center, Graphics g, Color color) {
+		// TODO Auto-generated method stub
+
+	}
+	public void drawLine(DottedLine line, Point center, Graphics g, Color color){
+		
+	}
+	
+
+}

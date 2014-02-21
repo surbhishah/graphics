@@ -1,0 +1,8 @@
+import java.awt.Graphics;
+import java.awt.Point;
+public class Circle {
+	public static void drawCircle(Graphics g, Point center,int radius){
+		g.drawOval(center.x-radius, center.y-radius, 2*radius, 2*radius);
+	}
+	public static void fillCircle(Graphics p, Point center, int radius)
+}

@@ -1,0 +1,12 @@
+import java.awt.Graphics;
+
+import javax.swing.JApplet;
+
+
+@SuppressWarnings("serial")
+public class PolygonApplet extends JApplet{
+	@Override
+	public void paint(Graphics g){
+		
+	}
+}

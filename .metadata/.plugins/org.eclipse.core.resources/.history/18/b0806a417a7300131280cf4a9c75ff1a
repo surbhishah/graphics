@@ -1,0 +1,21 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.applet.Applet;
+public class Planet extends Applet{
+	public void paint(Graphics g){
+		g.drawOval(50, 50, 100, 100);
+		g.setColor(Color.BLUE);
+			try {
+				for(int i =20;i<100;i+=5){
+					g.fillOval(i, 50, 100, 100);
+					Thread.sleep(1000);
+					g.clearRect(0, 0, 10000, 10000);
+								}
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
+	}
+}

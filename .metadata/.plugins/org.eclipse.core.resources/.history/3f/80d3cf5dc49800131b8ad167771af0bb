@@ -1,0 +1,14 @@
+package algorithms;
+
+import graphics.Point;
+
+import java.awt.Graphics;
+
+import circle.Circle;
+
+public class MidPointAlgorithm implements CircleDrawingAlgorithm {
+
+	@Override
+	public void drawCircle(Circle circle, Graphics g, Point coordinateCenter) {
+		
+}

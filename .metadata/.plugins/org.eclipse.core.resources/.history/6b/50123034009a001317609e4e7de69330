@@ -1,0 +1,11 @@
+package geometricTransformations;
+
+public class Shearing implements GeometricTransformation {
+
+	@Override
+	public void tranform() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

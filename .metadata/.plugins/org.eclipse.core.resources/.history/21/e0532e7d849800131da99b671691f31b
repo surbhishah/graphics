@@ -1,0 +1,7 @@
+package algorithms;
+import java.awt.Graphics;
+import circle.Circle;
+
+public interface CircleDrawingAlgorithm {
+	public void drawCircle(Circle circle, Graphics g);
+}

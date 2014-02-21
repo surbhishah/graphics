@@ -1,0 +1,10 @@
+package geometricTransformations;
+public class Translation implements GeometricTransformation {
+
+	@Override
+	public void tranform() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

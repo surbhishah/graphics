@@ -1,0 +1,53 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JApplet;
+import java.awt.Point;
+
+public class Planet extends JApplet{
+	public void paint(Graphics g){
+		g.drawString("Width="+getWidth(), 50, 50);
+		g.drawString("Height="+getHeight(), 50, 100);
+		//drawAxes(g,400,400);
+		Point p = new Point(0,0);
+		Point center = new Point(400,400);
+		drawAxes(g,center);
+		Point newp=translateAxes(p,center);
+		//drawCircle(g,,50);
+	
+		
+	}
+	Point translateAxes(Point p, Point center){
+			return new Point(center.x+ p.x,center.y -p.y);	
+	}
+	
+	void drawAxes(Graphics g, Point center){
+		g.drawLine(0,center.y,getWidth(),center.x);
+		g.drawLine(center.x,0,center.y,getHeight());		
+	}
+	void drawCircle(Graphics g, Point center,int radius){
+		g.drawOval(center.x-radius, center.y-radius, 2*radius, 2*radius);
+		
+		
+
+//		g.drawOval(50, 50, 10, 10);
+//		g.setColor(Color.yellow);
+//		g.fillOval(50, 50, 20, 20);
+//		//this.setBounds(500, 500, 200,200);
+//		g.setColor(Color.BLUE);
+//		//int x,y;
+//			try {
+//				for(Point theta = 0; theta<= 2*Math.PI;theta+=0.1){
+//					x= (int)(50+50*Math.sin(theta));
+//					y= (int)(50+50*Math.cos(theta));
+//					g.fillOval(x,y , 100, 100);
+//					Thread.sleep(1000);
+//					g.clearRect(x, y, 100, 100);
+//				}
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//	
+		
+	}
+	
+}

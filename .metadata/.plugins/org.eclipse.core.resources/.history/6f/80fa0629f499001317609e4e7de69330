@@ -1,0 +1,13 @@
+package polygon;
+
+public class Snippet {
+	public Polygon(Point points[]){
+			int i =0;
+			for(Point point:points){
+				this.vertices[i++]= point;
+			}
+			this.color = Color.blue;
+		}
+		
+}
+

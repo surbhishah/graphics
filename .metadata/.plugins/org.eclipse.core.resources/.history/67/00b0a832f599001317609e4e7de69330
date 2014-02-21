@@ -1,0 +1,5 @@
+package lines;
+
+public interface LineDrawingAlgorithm {
+
+}

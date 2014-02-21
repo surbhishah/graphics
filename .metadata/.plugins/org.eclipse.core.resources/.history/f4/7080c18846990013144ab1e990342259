@@ -1,0 +1,17 @@
+package algorithms;
+
+import graphics.Point;
+
+import java.awt.Graphics;
+
+import circle.Circle;
+
+public class BresenhemAlgorithm extends CircleDrawingAlgorithm {
+
+	@Override
+	public void drawCircle(Circle circle, Graphics g, Point coordinateCenter) {
+
+		
+	}
+
+}

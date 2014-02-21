@@ -1,0 +1,5 @@
+import 
+
+public class Polygon {
+	Point points[];
+}

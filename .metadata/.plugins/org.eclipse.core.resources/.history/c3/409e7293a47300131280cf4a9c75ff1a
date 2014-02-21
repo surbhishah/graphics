@@ -1,0 +1,7 @@
+
+public class Circle {
+	double radius;
+	double centreX;
+	double centreY;
+	
+}

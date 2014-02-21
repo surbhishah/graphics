@@ -1,0 +1,6 @@
+
+public class DottedAndDashedLine extends Line {
+	public DottedAndDashedLine(Point p1, Point p2){
+		super(p1,p2);
+	}
+}

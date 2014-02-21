@@ -1,0 +1,15 @@
+
+import graphics.Point;
+
+import java.awt.Color;
+
+public class Polygon {
+	Point points[];
+	Color color;
+	public Polygon(Point points[]){
+		int i =0;
+		for(Point point:points){
+			this.points[i++]= point;
+		}
+	}
+}

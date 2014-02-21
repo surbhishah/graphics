@@ -1,0 +1,32 @@
+package polygon;
+
+import graphics.Point;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Polygon {
+	Point vertices[];// vertices should be ordered..end points of a line must be
+						// in order
+	Color color;
+
+	public Polygon(Point vertices[]) {
+		this.vertices = vertices;
+		this.color = Color.blue;
+	}
+
+	public Polygon(Point vertices[], Color color) {
+		this.vertices = vertices;
+		this.color = color;
+	}
+
+	public void drawPolygon(Graphics g, Point coordinateCenter) {
+		int n = vertices.length;
+
+		for (int i = 0; i < n; i++) {
+
+		}
+		Line line = new Line();
+	}
+
+}

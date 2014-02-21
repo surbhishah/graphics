@@ -1,0 +1,30 @@
+import java.awt.Graphics;
+import java.awt.Color;
+public class Point {
+	int x;
+	int y;
+	public Point(){}
+	public Point(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+	public void translateAndDrawPoint(Graphics g, Point center, Color color){
+		Point translatedPoint = this.translate(center);
+		translatedPoint.drawPoint(g,color);
+	}
+	public void drawPoint(Graphics g, Color color){
+		g.setColor(color);
+		g.drawLine(x, y, x, y);
+	}
+	
+	public Point translate(Point center){
+		return AxesUtility.translateAxes(this, center);
+	}
+	public Point reflectAboutXAxis(){
+		return new Point(this.x, -this.y);
+	}
+	public Point reflectAbourYAxis(){
+		return new Point(this.x, -this.y);
+		
+	}
+}

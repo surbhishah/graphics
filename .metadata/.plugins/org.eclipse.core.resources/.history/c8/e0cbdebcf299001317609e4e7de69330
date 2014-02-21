@@ -1,0 +1,8 @@
+import graphics.Point;
+
+public class Polygon {
+	Point points[];
+	public Polygon(){
+		
+	}
+}

@@ -1,0 +1,10 @@
+
+public class DDAAlgorithm implements LineDrawingAlgorithm{
+
+	@Override
+	public void drawLine() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

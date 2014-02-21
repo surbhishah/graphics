@@ -1,0 +1,6 @@
+
+public interface CircleDrawingAlgorithm {
+	public void drawCircle(){
+		
+	}
+}
