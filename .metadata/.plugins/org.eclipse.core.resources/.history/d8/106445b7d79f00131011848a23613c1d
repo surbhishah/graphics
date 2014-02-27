@@ -1,0 +1,21 @@
+package algorithms;
+
+import graphics.Point;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Robot;
+
+public class BoundaryFillAlgorithm implements FillAlgorithm {
+	public void fill(Point start, Graphics g, Color fillColor,
+			Color boundaryColor) {
+		Color current;
+		Robot robot = new Robot();
+		Color currentPixelColor = robot.getPixelColor(start.x, start.y);
+		if (!currentPixelColor.equals(boundaryColor)
+				&& !currentPixelColor.equals(fillColor)) {
+
+		}
+
+	}
+}

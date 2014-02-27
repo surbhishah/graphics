@@ -25,7 +25,13 @@
 <fullyQualifiedTypeName name="java.awt.Point"/>
 <fullyQualifiedTypeName name="lines.LineDrawingAlgorithm"/>
 <fullyQualifiedTypeName name="geometricTransformations.Shearing"/>
-<fullyQualifiedTypeName name="graphics.Point"/>
-<fullyQualifiedTypeName name="lines.Line"/>
 <fullyQualifiedTypeName name="lines.BresenhemAlgorithm"/>
+<fullyQualifiedTypeName name="lines.Line"/>
+<fullyQualifiedTypeName name="algorithms.FillAlgorithm"/>
+<fullyQualifiedTypeName name="java.awt.Polygon"/>
+<fullyQualifiedTypeName name="shapes.Polygon"/>
+<fullyQualifiedTypeName name="java.awt.Robot"/>
+<fullyQualifiedTypeName name="graphics.Point"/>
+<fullyQualifiedTypeName name="algorithms.BoundaryFillAlgorithm"/>
+<fullyQualifiedTypeName name="java.awt.AWTException"/>
 </qualifiedTypeNameHistroy>

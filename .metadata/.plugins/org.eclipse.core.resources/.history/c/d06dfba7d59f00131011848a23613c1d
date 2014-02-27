@@ -1,0 +1,13 @@
+import java.awt.Graphics;
+
+import javax.swing.JApplet;
+
+import shapes.Polygon;
+
+@SuppressWarnings("serial")
+public class FillApplet extends JApplet {
+	@Override
+	public void paint(Graphics g){
+		Polygon p = new Polygon();
+	}
+}

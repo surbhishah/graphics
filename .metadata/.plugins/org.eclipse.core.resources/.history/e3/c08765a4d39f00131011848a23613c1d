@@ -1,0 +1,6 @@
+import java.applet.JApplet;
+
+
+public class FillApplet extends JApplet {
+
+}

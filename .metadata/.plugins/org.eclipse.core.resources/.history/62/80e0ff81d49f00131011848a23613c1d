@@ -1,0 +1,7 @@
+import javax.swing.JApplet;
+
+
+@SuppressWarnings("serial")
+public class FillApplet extends JApplet {
+
+}

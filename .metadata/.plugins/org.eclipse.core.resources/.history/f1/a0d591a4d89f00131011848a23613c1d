@@ -1,0 +1,30 @@
+import graphics.AxesUtility;
+import graphics.Point;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JApplet;
+
+import algorithms.BoundaryFillAlgorithm;
+import shapes.Polygon;
+
+@SuppressWarnings("serial")
+public class FillApplet extends JApplet {
+	@Override
+	public void paint(Graphics g){
+		Point coordinateCenter = new Point(400, 400);
+		AxesUtility.drawCoordinateSystem(this, g, Color.BLACK, 100,
+				coordinateCenter);
+		AxesUtility.drawAxes(this, g, coordinateCenter, Color.RED);
+		Point vertices[] = new Point[3];
+		vertices[0] = new Point(0, 0);
+		vertices[1] = new Point(300, 0);
+		vertices[2] = new Point(300, 100);
+		//vertices[3]= new Point(0,100);
+		Polygon polygon = new Polygon(vertices, Color.BLUE);
+		polygon.draw(g, coordinateCenter);
+		BoundaryFillAlgorithm algo = new BoundaryFillAlgorithm();
+		//algo.fill(x, y, g, fillColor, boundaryColor);
+	}
+}

@@ -1,0 +1,11 @@
+package algorithms;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class BoundaryFillAlgorithm implements FillAlgorithm{
+	public void fill(Graphics g, Color fillColor, Color boundaryColor){
+		Color current = new Color();
+		
+	}
+}
