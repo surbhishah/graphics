@@ -1,0 +1,7 @@
+package geometricTransformations;
+
+
+public class Shearing implements GeometricTransformation {
+
+	
+}

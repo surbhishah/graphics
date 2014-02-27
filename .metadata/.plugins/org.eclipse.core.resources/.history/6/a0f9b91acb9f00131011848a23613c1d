@@ -1,0 +1,25 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+public class Rotation implements GeometricTransformation {
+	private final int angle;// angle in degrees
+
+	public Rotation(int angle) throws Exception {
+		this.angle = angle;
+	}
+
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		double radian = Math.PI * angle / 180;
+		int cos = Math.cos(radian);
+		int sin = Math.sin(radian);
+		int matrix[][] = { { cos, sin, 0 }, { -sin, cos, 0 }, { 0, 0, 1 } };
+		Matrix rotationMatrix = new Matrix(matrix);
+		Matrix resultMatrix = points.multiply(rotationMatrix);
+		return resultMatrix;
+	}
+
+}

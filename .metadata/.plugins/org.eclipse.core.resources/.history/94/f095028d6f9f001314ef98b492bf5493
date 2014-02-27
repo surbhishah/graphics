@@ -1,0 +1,23 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+
+public class Translation implements GeometricTransformation {
+	private final int tx;
+	private final int ty;
+
+	@Override
+
+	public Translation(int tx, int ty) {
+		this.tx = tx;
+		this.ty = ty;
+	}
+
+	public Matrix transform(Matrix points) {
+		int matrix[][] = { { 1, 0, tx }, { 0, 1, ty }, { 0, 0, 1 } };
+		Matrix translationMatrix = new Matrix(matrix);
+		Matrix resultMatrix = points.multiply(translationMatrix);
+		return resultMatrix;
+	}
+
+}

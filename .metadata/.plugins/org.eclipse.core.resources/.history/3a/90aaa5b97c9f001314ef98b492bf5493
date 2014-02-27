@@ -1,0 +1,16 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Shearing implements GeometricTransformation {
+
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+
+	}
+
+	
+}

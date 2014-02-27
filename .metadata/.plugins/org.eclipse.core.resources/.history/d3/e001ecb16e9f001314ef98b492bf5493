@@ -1,0 +1,8 @@
+package exceptions;
+
+public class InvalidMatrixOperationException extends Exception {
+	@Override
+	public String toString(){
+		return "InvalidMatrixOperationException"+ this.getStackTrace();
+	}
+}

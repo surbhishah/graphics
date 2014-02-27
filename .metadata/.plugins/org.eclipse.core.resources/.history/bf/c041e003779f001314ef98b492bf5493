@@ -1,0 +1,8 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+
+public class Scaling implements GeometricTransformation {
+
+	
+}

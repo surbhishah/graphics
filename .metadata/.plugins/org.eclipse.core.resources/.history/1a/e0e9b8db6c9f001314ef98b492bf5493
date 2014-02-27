@@ -1,0 +1,16 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+
+public class Translation implements GeometricTransformation {
+	private translationMatrix;
+	@Override
+	public void tranform(Matrix m) {
+		// TODO Auto-generated method stub
+
+	}
+	public void transform(Matrix m, int tx, int ty){
+		Matrix translationMatrix 
+	}
+
+}

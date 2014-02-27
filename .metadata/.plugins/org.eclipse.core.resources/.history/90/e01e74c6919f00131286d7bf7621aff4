@@ -1,0 +1,30 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+public class Reflection implements GeometricTransformation {
+	// y = mx+c
+	private final double m;
+	private final int c;
+
+	public Reflection(double m, int c) {
+		this.m = m;
+		this.c = c;
+	}
+
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		double tan = m;
+		double cos = Math.sqrt(1 / (1 + tan * tan));// (secx)^2 = 1 +
+		// (tanx)^2
+		double sin = tan * cos;// tan = sin/cos
+		double cos2x = 
+		int matrix[][] = { { 1, 0, 0 }, { 0, 1, 0 }, { tx, ty, 1 } };
+		Matrix translationMatrix = new Matrix(matrix);
+		Matrix resultMatrix = points.multiply(translationMatrix);
+		return resultMatrix;
+	}
+
+}

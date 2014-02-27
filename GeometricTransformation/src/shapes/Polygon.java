@@ -11,10 +11,11 @@ import lines.LineDrawingAlgorithm;
 import matrices.Matrix;
 
 public class Polygon implements Shape {
-	Point vertices[];// vertices should be ordered..end points of a line must be
+	private final Point vertices[];// vertices should be ordered..end points of a line must be
 						// in order
-	Color color;
-	int n ;// n = no of sides 
+	private Color color;
+	int n;// n = no of sides
+
 	public Polygon(Point vertices[]) {
 		this.vertices = vertices;
 		this.color = Color.blue;
@@ -26,23 +27,47 @@ public class Polygon implements Shape {
 		this.color = color;
 	}
 
+	public Polygon(Matrix m, Color color) throws Exception {
+		this(m);
+		this.color = color;
+	}
+
+	public Polygon(Matrix m) throws Exception {
+		if (m.columns != 3)
+			throw new Exception("Invalid Polygon coordinates");
+		for (int i = 0; i < m.rows; i++) {
+			if (m.matrix[i][2] != 1)
+				throw new Exception("Invalid Polygon coordinates");
+		}
+		Point point;
+		vertices = new Point[m.rows];
+		for (int i = 0; i < m.rows; i++) {
+			point = new Point();
+			point.x = (int)Math.round(m.matrix[i][0]);
+			point.y = (int)Math.round(m.matrix[i][1]);
+			this.vertices[i] = point;
+		}
+		this.color = Color.BLUE;
+		this.n = vertices.length;
+	}
+
 	public void draw(Graphics g, Point coordinateCenter) {
 		Line line;
 		LineDrawingAlgorithm algo = new BresenhemAlgorithm();
 		for (int i = 0; i < n - 1; i++) {
-			line = new Line(vertices[i], vertices[i + 1]);
+			line = new Line(vertices[i], vertices[i + 1], this.color);
 			line.drawLine(coordinateCenter, g, algo);
 		}
-		line = new Line(vertices[0], vertices[n - 1]);
+		line = new Line(vertices[0], vertices[n - 1],this.color);
 		line.drawLine(coordinateCenter, g, algo);
 
 	}
 
 	@Override
-	public Matrix mapToMatrix() {
-		int matrix[][] = new int[n][3];
-		int i=0;
-		for(Point vertex: vertices){
+	public Matrix mapShapeToMatrix() {
+		double matrix[][] = new double[n][3];
+		int i = 0;
+		for (Point vertex : vertices) {
 			matrix[i][0] = vertex.x;
 			matrix[i][1] = vertex.y;
 			matrix[i][2] = 1;

@@ -1,8 +1,11 @@
 package geometricTransformations;
 
 import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
 
 public interface GeometricTransformation {
-	public void tranform(Matrix m);
+	
+	public Matrix transform(Matrix points) throws InvalidMatrixOperationException;
+
 
 }

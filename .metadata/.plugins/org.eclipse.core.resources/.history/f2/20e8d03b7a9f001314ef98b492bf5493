@@ -1,0 +1,21 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Scaling implements GeometricTransformation {
+	private final int sx;
+	private final int sy;
+	public Scaling(int sx, int sy){
+		
+	}
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

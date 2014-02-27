@@ -1,0 +1,8 @@
+package exceptions;
+
+public class InvalidMatrixOperation {
+	@Override
+	public string toString(){
+		
+	}
+}

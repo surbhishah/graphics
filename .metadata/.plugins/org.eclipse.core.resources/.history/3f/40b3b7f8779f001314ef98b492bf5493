@@ -1,0 +1,26 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Rotation implements GeometricTransformation {
+	private final int theta;// theta in degrees
+	public Rotation(int theta){
+		if(theta < 0 || theta > 360){
+			
+		}
+		this.theta = theta;
+	}
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		
+		int matrix[][] = { { 1, 0, 0 }, { 0, 1, 0 }, { tx, ty, 1 } };
+		Matrix translationMatrix = new Matrix(matrix);
+		Matrix resultMatrix = points.multiply(translationMatrix);
+		return resultMatrix;
+	}
+
+	
+}

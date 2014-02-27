@@ -69,6 +69,11 @@ public class Line {
 		p1 = p1.translateAxesFromStandard(virtualCenter);
 		p2 = p2.translateAxesFromStandard(virtualCenter);
 		algo.drawLine(this, virtualCenter, g);
+		p1 = p1.translate(virtualCenter);
+		p2 = p2.translate(virtualCenter);
+		p1 = p1.translateAxesFromStandard(center);
+		p2 = p2.translateAxesFromStandard(center);
+		
 	}
 
 	public void drawPoint(Point point, Graphics g, Point center) {

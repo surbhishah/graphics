@@ -3,11 +3,11 @@
 	<section name="PreferencesImportWizard">
 		<item value="/home/surbhi/Desktop/theme-68.epf" key=""/>
 		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/home/surbhi/Downloads/theme-30.epf"/>
 			<item value="/home/surbhi/Desktop/eclipse/Themes/theme-30.epf"/>
 			<item value="/home/surbhi/Desktop/eclipse/Themes/theme-68.epf"/>
 			<item value="/home/surbhi/Desktop/eclipse/Themes/theme-4.epf"/>
 			<item value="/home/surbhi/Desktop/theme-68.epf"/>
-			<item value="/home/surbhi/Desktop/theme-30.epf"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
@@ -31,6 +31,13 @@
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="com.objectaid.uml.new"/>
 		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="800" key="DIALOG_WIDTH"/>
+		<item value="-155" key="DIALOG_Y_ORIGIN"/>
+		<item value="-82" key="DIALOG_X_ORIGIN"/>
+		<item value="744" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 		<item value="true" key="uncategorizedFilter"/>

@@ -1,0 +1,47 @@
+package matrices;
+
+public class Matrix {
+	public int matrix[][];
+	public final int rows;
+	public final int columns;
+	public Matrix(int matrix[][]) {
+		this.matrix = matrix;
+		this.rows = matrix.length;
+		this.columns = matrix[0].length;
+	}
+	
+	public Matrix multiply(Matrix m){
+		int rows1 = this.rows;
+		int columns1 = this.columns; 
+		int rows2 = m.rows;
+		int columns2 = m.columns;
+		if(columns1 != rows2){// Matrix m cannot be multiplied 
+			return null;// Incompatible dimensions
+		}
+		int result[][]= new int[rows1][columns2];
+		int sum;
+		for(int i = 0 ; i< rows1 ; i++){
+			for(int j = 0 ; j<columns2 ; j++){
+				sum = 0;
+				for(int k=0 ; k< columns1 ; k++){
+					sum +=  this.matrix[i][k] * m.matrix[k][j];
+				}
+				result[i][j] = sum;
+			}
+		}
+		Matrix resultMatrix = new Matrix(result);
+		return resultMatrix;
+	}
+	public Matrix add(Matrix m){
+		if(m.rows != rows || m.columns != columns){
+			return null;// Cannot add matrices of different dimensions
+		}
+		int result[][]= new int[rows][columns];
+		for(int i = 0 ; i< rows ; i++){
+			for(int j = 0 ; j<columns ; j++){
+				result[i][j] = this.matrix[i][j] + m.matrix[i][j];
+			}
+		}
+		
+	}
+}

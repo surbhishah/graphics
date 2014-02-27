@@ -1,0 +1,27 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Rotation implements GeometricTransformation {
+	private final int angle;// theta in degrees
+	public Rotation(int theta) throws Exception{
+		if(theta < 0 || theta > 360){
+			throw new Exception("Invalid theta given as parameter to constructor of Rotation Class");
+		}
+		this.theta = theta;
+	}
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		double radian = 
+		Math.cos(a);
+		int matrix[][] = { { 1, 0, 0 }, { 0, 1, 0 }, { tx, ty, 1 } };
+		Matrix translationMatrix = new Matrix(matrix);
+		Matrix resultMatrix = points.multiply(translationMatrix);
+		return resultMatrix;
+	}
+
+	
+}

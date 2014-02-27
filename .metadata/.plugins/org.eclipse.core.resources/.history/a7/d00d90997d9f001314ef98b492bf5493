@@ -1,0 +1,17 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Reflection implements GeometricTransformation {
+
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

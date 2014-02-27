@@ -1,0 +1,19 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Reflection implements GeometricTransformation {
+	// y = mx+c 
+	int m;
+	int c;
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

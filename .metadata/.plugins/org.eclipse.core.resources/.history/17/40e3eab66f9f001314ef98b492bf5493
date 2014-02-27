@@ -1,0 +1,8 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+
+public interface GeometricTransformation {
+	public Matrix tranform(Matrix m);
+
+}

@@ -1,0 +1,29 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Shearing implements GeometricTransformation {
+	private final int sx;
+	private final int sy;
+	private final int xref;
+	private final int yref;
+	public Shearing(int sx, int sy, int xref, int yref){
+		this.sx = sx;
+		this.sy = sy;
+		this.xref = xref;
+		this.yref = yref;
+	}
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		int matrix[][] = { { 1, sy, 0 }, { 0, 1, 0 },
+				{ 0, 0, 1 } };
+		Matrix reflectionMatrix = new Matrix(matrix);
+		Matrix resultMatrix = points.multiply(reflectionMatrix);
+		return resultMatrix;
+	}
+
+	
+}

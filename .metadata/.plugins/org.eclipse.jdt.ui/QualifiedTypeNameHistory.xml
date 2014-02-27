@@ -21,9 +21,11 @@
 <fullyQualifiedTypeName name="algorithms.CircleDrawingAlgorithm"/>
 <fullyQualifiedTypeName name="algorithms.DirectEquationUse"/>
 <fullyQualifiedTypeName name="algorithms.MidPointAlgorithm"/>
+<fullyQualifiedTypeName name="polygon.Polygon"/>
 <fullyQualifiedTypeName name="java.awt.Point"/>
+<fullyQualifiedTypeName name="lines.LineDrawingAlgorithm"/>
+<fullyQualifiedTypeName name="geometricTransformations.Shearing"/>
+<fullyQualifiedTypeName name="graphics.Point"/>
 <fullyQualifiedTypeName name="lines.Line"/>
 <fullyQualifiedTypeName name="lines.BresenhemAlgorithm"/>
-<fullyQualifiedTypeName name="graphics.Point"/>
-<fullyQualifiedTypeName name="polygon.Polygon"/>
 </qualifiedTypeNameHistroy>

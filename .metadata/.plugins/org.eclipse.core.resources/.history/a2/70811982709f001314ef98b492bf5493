@@ -1,0 +1,10 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+public interface GeometricTransformation {
+	
+	public Matrix transform(Matrix points) throws InvalidMatrixOperationException;
+
+}

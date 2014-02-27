@@ -13,26 +13,26 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="colors" key="selection"/>
+		<item value="shy" key="selection"/>
 		<list key="findhistory">
+			<item value="sy"/>
+			<item value="sx"/>
+			<item value="get"/>
+			<item value="getSlope"/>
 			<item value="colors"/>
 			<item value="Color.BLACK"/>
 			<item value="7"/>
 			<item value="slope"/>
-			<item value="15"/>
-			<item value="capType"/>
-			<item value="colo"/>
-			<item value="color"/>
 		</list>
 		<list key="replacehistory">
+			<item value="shy"/>
+			<item value="shx"/>
 			<item value="line.getColor()"/>
 			<item value="15"/>
 			<item value="7"/>
 			<item value="cap"/>
 			<item value="y"/>
 			<item value="x"/>
-			<item value="mod"/>
-			<item value="decision_var"/>
 		</list>
 	</section>
 </section>

@@ -1,0 +1,20 @@
+package geometricTransformations;
+
+import matrices.Matrix;
+import exceptions.InvalidMatrixOperationException;
+
+
+public class Shearing implements GeometricTransformation {
+
+	@Override
+	public Matrix transform(Matrix points)
+			throws InvalidMatrixOperationException {
+		int matrix[][] = { { cos2x, sin2x, 0 }, { sin2x, -cos2x, 0 },
+				{ 0, 0, 1 } };
+		Matrix reflectionMatrix = new Matrix(matrix);
+		Matrix resultMatrix = points.multiply(reflectionMatrix);
+		return resultMatrix;
+	}
+
+	
+}
