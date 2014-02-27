@@ -1,7 +1,0 @@
-package shapes;
-
-import matrices.Matrix;
-
-public interface Shape {
-	public Matrix mapShapeToMatrix();
-}

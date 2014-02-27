@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;exceptions.InvalidMatrixOperation.java&apos; to &apos;InvalidMatrixOperationException.java&apos;&#x0A;- Original project: &apos;GeometricTransformation&apos;&#x0A;- Original element: &apos;exceptions.InvalidMatrixOperation.java&apos;&#x0A;- Renamed element: &apos;exceptions.InvalidMatrixOperationException.java&apos;" description="Rename compilation unit &apos;InvalidMatrixOperation.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;exceptions{InvalidMatrixOperation.java" name="InvalidMatrixOperationException.java" references="false" stamp="1393478268506" version="1.0"/>
-</session>
