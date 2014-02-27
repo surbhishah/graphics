@@ -1,8 +1,0 @@
-package matrices;
-
-public class Matrix {
-	int matrix[][];
-	public Matrix(int matrix [] []){
-		this.matrix = matrix;
-	}
-}

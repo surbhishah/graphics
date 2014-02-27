@@ -1,6 +1,0 @@
-import java.awt.Graphics;
-
-
-public interface CircleDrawingAlgorithm {
-	public void drawCircle(Circle circle, Graphics g);
-}

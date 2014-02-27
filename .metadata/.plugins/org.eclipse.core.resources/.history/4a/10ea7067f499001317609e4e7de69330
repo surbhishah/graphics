@@ -1,8 +1,0 @@
-import javax.swing.JApplet;
-
-
-public class PolygonApplet extends JApplet{
-	public void paint(){
-		
-	}
-}

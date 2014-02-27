@@ -1,5 +1,0 @@
-package geometricTransformations;
-
-public interface GeometricTransformation {
-
-}

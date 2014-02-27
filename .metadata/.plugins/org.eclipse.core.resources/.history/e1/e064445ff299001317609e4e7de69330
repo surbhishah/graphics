@@ -1,6 +1,0 @@
-import java.awt.Point;
-
-
-public class Polygon {
-	Point points[];
-}

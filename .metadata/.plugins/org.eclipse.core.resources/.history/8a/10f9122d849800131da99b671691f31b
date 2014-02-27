@@ -1,6 +1,0 @@
-package algorithms;
-
-public class Snippet {
-	public void drawCircle(Circle circle, Graphics g);
-}
-
