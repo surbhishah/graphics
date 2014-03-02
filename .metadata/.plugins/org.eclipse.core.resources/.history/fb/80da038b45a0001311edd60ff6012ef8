@@ -1,0 +1,50 @@
+import fillAlgorithms.FloodFillAlgorithm;
+import graphics.Point;
+
+import java.awt.AWTException;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Robot;
+
+import javax.swing.JApplet;
+
+import shapes.Polygon;
+
+@SuppressWarnings("serial")
+public class FillApplet extends JApplet {
+	@Override
+	public void paint(Graphics g) {
+		try {
+			// Center of the coordinate system
+			Point coordinateCenter = new Point(400, 400);
+			Color black = new Color(0, 0, 0);
+			Color red = new Color(255, 0, 0);
+			Color white = new Color(255, 255, 255);
+			g.setColor(red);
+			g.fillRect(0, 0, 1000, 1000);
+			Point vertices[] = new Point[3];
+			// These vertices are with respect to the center of coordinate
+			// center defined above
+			vertices[0] = new Point(-5, 5);
+			vertices[1] = new Point(5, 0);
+			vertices[2] = new Point(0, -5);
+			// Polygon class contains methods to draw polygons
+			// This constructor accepts the vertices in the correct order and
+			// the color of polygon
+			// Fill color may be different from this color
+			Polygon polygon = new Polygon(vertices, black);
+			// Draw method draws the polygon after translating them into the
+			// standard coordinate system of
+			// having 0,0 in the top left corner
+			polygon.draw(g, coordinateCenter);
+			FloodFillAlgorithm algo = new FloodFillAlgorithm();
+			Robot robot = new Robot();
+			algo.fill(robot, 400, 400, g, black, black);
+
+		} catch (AWTException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,30 @@
+package fillAlgorithms;
+
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
+public class BoundaryFillAlgorithm implements FillAlgorithm {
+	public void fill(int x, int y , int fillColorRGB, int boundaryColorRGB){
+		BufferedImage img = new BufferedImage(1000, 1000,
+				BufferedImage.TYPE_INT_RGB);
+		Graphics2D g2D = img.createGraphics();
+		
+	}
+	public void __fill(BufferedImage img, int x, int y,int fillColorRGB,
+			int boundaryColorRGB)  {
+		// reads the pixel value of pixel at x,y
+		int currentRGB= img.getRGB(x, y);	
+		// if pixel is neither boundary color nor fill color
+		// then fills the color
+		if (currentRGB != fillColorRGB && currentRGB != boundaryColorRGB) {
+			img.setRGB(x, y, fillColorRGB);	
+			// recursive call
+			fill(img,x + 1, y,fillColorRGB, boundaryColorRGB);
+			fill(img,x - 1, y,fillColorRGB, boundaryColorRGB);
+			fill(img,x, y + 1,fillColorRGB, boundaryColorRGB);
+			fill(img,x, y - 1,fillColorRGB, boundaryColorRGB);
+
+		}
+
+	}
+}

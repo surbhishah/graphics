@@ -1,0 +1,15 @@
+package fillAlgorithms;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Robot;
+
+public class FloodFillAlgorithm implements FillAlgorithm{
+	public void fill(Robot robot, int x, int y,Graphics g, Color fillColor, Color oldColor){
+		Color current = robot.getPixelColor(x, y);
+		if(current.equals(oldColor)){
+			g.setColor(fillColor);
+			g.drawLine(x, y, x, y);
+		}
+	}
+}

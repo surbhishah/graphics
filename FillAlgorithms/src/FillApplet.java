@@ -1,14 +1,3 @@
-import graphics.AxesUtility;
-import graphics.Point;
-
-import java.awt.AWTException;
-import java.awt.Color;
-import java.awt.Graphics;
-
-import javax.swing.JApplet;
-
-import shapes.Polygon;
-import algorithms.BoundaryFillAlgorithm;
 
 @SuppressWarnings("serial")
 public class FillApplet extends JApplet {
@@ -27,6 +16,7 @@ public class FillApplet extends JApplet {
 			polygon.draw(g, coordinateCenter);
 			BoundaryFillAlgorithm algo = new BoundaryFillAlgorithm();
 			algo.fill(400, 400, g, Color.RED, Color.BLUE);
+			
 			
 		} catch (AWTException e) {
 			e.printStackTrace();

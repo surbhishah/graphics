@@ -1,0 +1,40 @@
+package fillAlgorithms;
+
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+
+public class FloodFillAlgorithm implements FillAlgorithm {
+	public BufferedImage fill(BufferedImage img, int x, int y, Color fillColor,
+			Color boundaryColor) {
+		__fill(img, x, y, fillColor.getRGB(), boundaryColor.getRGB());
+		return img;
+
+	}
+
+	private void __fill(BufferedImage img, int x, int y, int fillColorRGB,
+			int oldColorRGB) {
+		// reads the pixel value of pixel at x,y
+		int currentRGB = img.getRGB(x, y);
+		// if pixel is neither boundary color nor fill color
+		// then fills the color
+		if (currentRGB == oldColor) {
+			img.setRGB(x, y, fillColorRGB);
+			// recursive call
+			__fill(img, x + 1, y, fillColorRGB, boundaryColorRGB);
+			__fill(img, x - 1, y, fillColorRGB, boundaryColorRGB);
+			__fill(img, x, y + 1, fillColorRGB, boundaryColorRGB);
+			__fill(img, x, y - 1, fillColorRGB, boundaryColorRGB);
+
+		}
+
+		Color current = robot.getPixelColor(x, y);
+		if (current.equals(oldColor)) {
+			img.setRGB(x, y, fillColor.getRGB());
+			fill(robot, x + 1, y, g, fillColor, oldColor);
+			fill(robot, x - 1, y, g, fillColor, oldColor);
+			fill(robot, x, y + 1, g, fillColor, oldColor);
+			fill(robot, x, y - 1, g, fillColor, oldColor);
+
+		}
+	}
+}

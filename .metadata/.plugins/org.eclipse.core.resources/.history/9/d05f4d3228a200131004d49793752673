@@ -1,0 +1,63 @@
+import fillAlgorithms.BoundaryFillAlgorithm;
+import graphics.Point;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JApplet;
+
+import shapes.Polygon;
+
+@SuppressWarnings("serial")
+public class FillApplet extends JApplet {
+	@Override
+	public void paint(Graphics g) {
+		try {
+			// Center of the coordinate system
+			Point coordinateCenter = new Point(400, 400);
+			Color black = new Color(0, 0, 0);
+			Color red = new Color(255, 0, 0);
+			Point vertices[] = new Point[3];
+			// These vertices are with respect to the center of coordinate
+			// center defined above
+			vertices[0] = new Point(-5, 5);
+			vertices[1] = new Point(5, 0);
+			vertices[2] = new Point(0, -5);
+			Point startingPoint = new Point(0,0);
+			// Polygon class contains methods to draw polygons
+			// This constructor accepts the vertices in the correct order and
+			// the color of polygon
+			// Fill color may be different from this color
+			Polygon polygon = new Polygon(vertices, black);
+			// Draw method draws the polygon after translating them into the
+			// standard coordinate system of
+			// having 0,0 in the top left corner
+			BoundaryFillAlgorithm algo = new BoundaryFillAlgorithm();
+			int xPoints[] = new int[vertices.length];
+			int yPoints[] = new int[vertices.length];
+			for(int i =0;i< vertices.length ; i++){
+				xPoints[i] = vertices[i].x;
+				yPoints[i] = vertices[i].y;
+			}
+			BufferedImage img = new BufferedImage(this.getWidth(), this.getHeight(),
+					BufferedImage.TYPE_INT_RGB);
+			Graphics2D g2D = img.createGraphics();
+			
+			g2D.setColor(red);
+			g2D.drawPolygon(xPoints, yPoints, 3);
+			int fillColorRGB = red.getRGB();
+			int boundaryColorRGB = red.getRGB();
+			startingPoint = startingPoint.translate(coordinateCenter);
+			algo.fill(g2D,startingPoint.x, startingPoint.y , fillColorRGB, boundaryColorRGB);
+					
+			
+			
+			g.drawImage(img,0, 0, 1000,1000, 0, 0, 1000, 1000,null );
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

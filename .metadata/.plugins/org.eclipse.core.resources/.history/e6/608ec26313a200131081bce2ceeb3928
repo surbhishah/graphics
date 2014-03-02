@@ -1,0 +1,32 @@
+package fillAlgorithms;
+
+import java.awt.AWTException;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Robot;
+import java.awt.image.BufferedImage;
+
+public class BoundaryFillAlgorithm implements FillAlgorithm {
+	public void fill(Robot robot, int x, int y, Graphics g, Color fillColor,
+			Color boundaryColor) throws AWTException {
+		BufferedImage img = new BufferedImage(1000, 1000, BufferedImage.TYPE_INT_RGB);
+		
+		
+		// reads the pixel value of pixel at x,y
+		Color currentPixelColor = robot.getPixelColor(x, y);
+		// if pixel is neither boundary color nor fill color
+		// then fills the color
+		if (!currentPixelColor.equals(boundaryColor)
+				&& !currentPixelColor.equals(fillColor)) {
+			g.setColor(fillColor);
+			g.drawLine(x, y, x, y);
+			// recursive call
+			fill(robot, x + 1, y, g, fillColor, boundaryColor);
+			fill(robot, x - 1, y, g, fillColor, boundaryColor);
+			fill(robot,x, y + 1, g, fillColor, boundaryColor);
+			fill(robot,x, y - 1, g, fillColor, boundaryColor);
+
+		}
+
+	}
+}

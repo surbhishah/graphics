@@ -14,10 +14,10 @@ public class BoundaryFillAlgorithm implements FillAlgorithm {
 				&& !currentPixelColor.equals(fillColor)) {
 			g.setColor(fillColor);
 			g.drawLine(x, y, x, y);
-			fill(x+1, y, g, fillColor, boundaryColor);
-			fill(x-1, y, g, fillColor, boundaryColor);
-			fill(x, y+1, g, fillColor, boundaryColor);
-			fill(x, y-1, g, fillColor, boundaryColor);
+			//fill(x+1, y, g, fillColor, boundaryColor);
+			//fill(x-1, y, g, fillColor, boundaryColor);
+			//fill(x, y+1, g, fillColor, boundaryColor);
+			//fill(x, y-1, g, fillColor, boundaryColor);
 			
 		}
 
