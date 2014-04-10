@@ -11,7 +11,7 @@ import lines.LineDrawingAlgorithm;
 import matrices.Matrix;
 
 public class Polygon implements Shape {
-	private final Point vertices[];// vertices should be ordered..end points of a line must be
+	public Point vertices[];// vertices should be ordered..end points of a line must be
 						// in order
 	private Color color;
 	int n;// n = no of sides
